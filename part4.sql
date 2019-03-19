@@ -2,7 +2,6 @@
 # Explanation: Since pokelevel directly influences the fields HP, max HP, attack, defense, etc., 
     # I thought the best way to order the trainers would be take an average of the totals of these fields
     # for each of their pokemon. The "best" trainer will have pokemon with the highest average in these fields.
-    # I have included the first 20 entries in a .tsv file but thought it best to omit the rest.
 
 SELECT GROUP_CONCAT(p.name) as "Pokemon", GROUP_CONCAT(tr.trainername) as "Trainer", 
        GROUP_CONCAT(pt.pokelevel) as "PokeLevels", GROUP_CONCAT(t.name) as "Primary Types", 
