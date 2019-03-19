@@ -39,12 +39,10 @@ GROUP BY t.name;
 
 # Question: How many pokemon at level 100 does each trainer with at least one level 100 pokemone have?
 # Answer: Omitted for brevity
-SELECT DISTINCT tr.trainername, COUNT(1)
-FROM pokemon_trainer pt
-JOIN trainers tr
-ON tr.trainerID = pt.trainerID
+SELECT trainerID, COUNT(1)
+FROM pokemon_trainer
 WHERE pokelevel = 100
-GROUP BY tr.trainername;
+GROUP BY trainerID;
 
 # Question: How many pokemon only belong to one trainer and no other?
 # Answer: 13
